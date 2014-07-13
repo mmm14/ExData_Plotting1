@@ -1,0 +1,6 @@
+par(mfrow=c(2,2))
+with (Muestra, {plot(Time,as.numeric(Global_active_power))
+plot(Time,Sub_metering_1)
+plot(Time,as.numeric(Voltage))
+plot(Time,Global_reactive_power)
+})
