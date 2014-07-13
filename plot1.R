@@ -1,0 +1,5 @@
+setwd("C:/$user/marketing/mi/2014")
+Todo <- read.table("./Big data/household_power_consumption.txt",sep=";",header=TRUE)
+Muestra <- subset(Todo,Date=="1/2/2007"|Date=="2/2/2007")
+Uno <- lapply(Muestra[,c("Global_active_power")],function(x) as.numeric(levels(x))[x])
+hist(as.numeric(Uno),xlab="Global Active Power(kilowatts)",ylab="Frecuency",main="Global Active Power")
